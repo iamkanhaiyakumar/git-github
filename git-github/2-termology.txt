@@ -1,0 +1,183 @@
+### Terminology in Git and GitHub
+
+When working with Git and interacting with the Git community, you'll quickly notice a unique set of terminology. For example, what you might refer to as a "folder" is called a **repository** in Git. And rather than calling it an "alternative timeline," it's referred to as a **branch**. While the term "alternative timeline" might sound more fun, we'll stick with "branch" for now. 😁
+
+---
+
+### Check Your Git Version
+
+Before diving deeper into using Git, it's useful to check the version you have installed. To do this, simply run the following command in your terminal:
+
+```bash
+git --version
+```
+
+This command will display the version of Git installed on your system. Git is a stable software, and breaking changes rarely occur, so it's unlikely that you'll encounter any major issues.
+
+---
+
+### Repository: The Heart of Git
+
+A **repository** is a collection of files and directories that Git tracks. You can think of it as more than just a folder on your computer. A repository can hold other folders, files, or even other repositories. It's a **container** that keeps all your code and tracks changes over time.
+
+While you could have a folder on your computer, Git allows you to track it, making it much more than just a regular folder. To check the state of your repository at any point, run:
+
+```bash
+git status
+```
+
+This will show you the current state of your repository, such as whether changes are staged or if there are untracked files.
+
+---
+
+### Not All Folders Are Tracked by Git
+
+It's important to note that not every folder or file is tracked by Git. For example, you may have some folders that Git doesn’t need to track. When you use Git to track a project, it keeps an eye on the green folders (tracked) and ignores the red ones (untracked).
+
+---
+
+### Configuring Your Git Settings
+
+Git allows you to customize many of your settings, such as your username and email. These are important because every time you make a commit, Git records who made the changes.
+
+To set up your email and username globally, you can run these commands:
+
+```bash
+git config --global user.email "your-email@example.com"
+git config --global user.name "Your Name"
+```
+
+You can verify your settings by running:
+
+```bash
+git config --list
+```
+
+This will display all your global settings, including your username, email, and other configuration details.
+
+---
+
+### Creating a Repository
+
+To create a repository, start by setting up a folder and initializing it with Git. It’s essentially the same as creating a regular folder, but by running Git commands, you enable Git to track changes within that folder.
+
+Use the following commands:
+
+```bash
+git init
+git status
+```
+
+The `git init` command initializes the folder as a Git repository. This will create a hidden `.git` folder within your project, where Git stores all the tracking data.
+
+---
+
+### The Commit Process
+
+A **commit** is the process of saving your changes to the repository. Think of it like taking a snapshot of your code at a particular moment in time. You can always revisit or "restore" those snapshots whenever needed.
+
+A typical workflow would look like this:
+
+1. **Initialize** the repository with `git init`.
+2. **Stage** the changes using `git add <file>`.
+3. **Commit** the changes with `git commit -m "commit message"`.
+   
+When you commit, you're essentially saying, "I want to save this snapshot with a description of the changes."
+
+---
+
+### The Complete Git Flow
+
+Here’s a high-level view of the typical Git workflow:
+
+1. **Create a repository** with `git init`.
+2. **Add files** to your repository using `git add <file>`.
+3. **Commit your changes** with `git commit`.
+4. **Push** your changes to GitHub (if using remote repositories).
+
+This is the basic Git flow. Of course, there’s more to it, but this is where every Git project starts.
+
+---
+
+### Staging Changes
+
+Before committing your changes, you need to **stage** them. Staging is Git’s way of saying, “Hey, I’m ready to commit these changes.” You can use the following commands:
+
+```bash
+git add <file>  # Stage a specific file
+git add .       # Stage all changes
+```
+
+After staging your changes, you can see what’s been staged and what's still untracked by running:
+
+```bash
+git status
+```
+
+---
+
+### Committing Changes
+
+Once you’ve staged your changes, it's time to **commit** them. A commit is like a snapshot of your code, marking the changes you made. To commit, run:
+
+```bash
+git commit -m "commit message"
+```
+
+The `-m` flag lets you add a commit message, which should describe the changes you made. If you don’t include the `-m` flag, Git will open your default editor (usually VIM), where you’ll need to write a message.
+
+---
+
+### Viewing Commit History
+
+To view the history of your commits, you can use:
+
+```bash
+git log
+```
+
+This will show all the commits made in the repository. You can make the log more concise by using the `--oneline` flag:
+
+```bash
+git log --oneline
+```
+
+---
+
+### Atomic Commits
+
+In Git, it's a good practice to make **atomic commits**. This means that each commit should represent a single logical change. This way, if something goes wrong, you can easily go back to a specific commit to fix it.
+
+---
+
+### Changing the Default Code Editor
+
+If you'd prefer to use **VSCode** (or another text editor) instead of VIM for Git commit messages, you can set it up with this command:
+
+```bash
+git config --global core.editor "code --wait"
+```
+
+Now, when Git opens an editor for commit messages, VSCode will be used.
+
+---
+
+### Using `.gitignore`
+
+Sometimes you don’t want Git to track certain files or folders, such as dependencies or environment settings. This is where a `.gitignore` file comes in. This file lists all the files or directories that Git should ignore.
+
+Example `.gitignore` file:
+
+```
+node_modules/
+.env
+.vscode/
+```
+
+With this file in place, Git will ignore these files when running `git status`.
+
+---
+
+### Conclusion
+
+In this section, we've explored the basics of Git and how it works. You’ve learned how to set up repositories, track changes, commit changes, view history, and even manage configuration settings. By now, you should have a solid understanding of how to use Git to manage your code effectively. Stay tuned as we dive deeper into advanced Git concepts and integrating Git with GitHub!

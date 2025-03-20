@@ -1,0 +1,104 @@
+### Git Behind the Scenes
+
+Git is a powerful version control system that helps developers track and manage changes to their files and code over time. But have you ever wondered how Git works behind the scenes? In this section, we’ll dive into the internals of Git and how it keeps track of all your code changes.
+
+---
+
+### Git Snapshots: A Point in Time
+
+In Git, **snapshots** represent specific points in time in the history of your project. These snapshots are not traditional images but rather a record of the files and folders that existed at a particular moment. Each snapshot is uniquely identified by a **hash code**, a string of characters that represents the exact contents of that snapshot.
+
+This means that every time you make a commit, Git takes a snapshot of your code — capturing not just the code but also its structure, allowing you to revert to any previous state whenever necessary.
+
+---
+
+### The Three Musketeers of Git
+
+Internally, Git stores data in three main objects, which we can think of as the "three musketeers" of Git. These are:
+
+1. **Commit Object**
+2. **Tree Object**
+3. **Blob Object**
+
+Each of these objects plays a crucial role in how Git tracks and organizes your code. Let’s break them down:
+
+---
+
+#### 1. **Commit Object**
+
+A **commit object** stores the history of your project. It resides in the `.git` folder, which contains all the information about your project. The commit object contains the following details:
+
+- **Tree Object**: A reference to the tree object that represents the project files.
+- **Parent Commit Object**: If it’s not the first commit, this points to the previous commit.
+- **Author**: The person who created the commit.
+- **Committer**: The person who applied the commit (which could be different from the author).
+- **Commit Message**: A message describing the changes made in the commit.
+
+---
+
+#### 2. **Tree Object**
+
+The **tree object** is responsible for storing the structure of your project. It contains information about:
+
+- **File Mode**: Permissions and file type (e.g., regular file, directory).
+- **File Name**: The name of the file or directory.
+- **File Hash**: A unique identifier for the file.
+- **Parent Tree Object**: The previous state of the tree (if any).
+
+The tree object essentially organizes and stores the files in a project as key-value pairs, where the key is the file name and the value is the file’s hash.
+
+---
+
+#### 3. **Blob Object**
+
+The **blob object** holds the actual contents of the file, stored in binary form. When you look at a file’s content in Git, it’s stored in a blob. Each blob object is identified by a unique hash, which is generated based on the content of the file. This ensures that identical files across commits or repositories are stored efficiently and uniquely.
+
+---
+
+### Helpful Git Commands to Explore Internals
+
+If you want to explore how Git manages these objects internally, here are some useful commands that will let you dive deeper into the structure of your repository:
+
+1. **Show Commit Object**  
+   To view a commit object and its internal details, use the command:
+
+   ```bash
+   git show -s --pretty=raw <commit-hash>
+   ```
+
+   This command will display detailed information about a specific commit.
+
+2. **Show Tree Object**  
+   Once you’ve grabbed the **tree id** from the previous command, you can use it to view the tree object with:
+
+   ```bash
+   git ls-tree <tree-id>
+   ```
+
+   This will list the contents of the tree (files and directories).
+
+3. **Show Blob Object**  
+   If you want to see the content of a specific file, use the **blob id** obtained from the tree object:
+
+   ```bash
+   git show <blob-id>
+   ```
+
+   This command will show the actual file content stored in the blob object.
+
+4. **Show Commit Object Details**  
+   You can also get more detailed information about a commit object using:
+
+   ```bash
+   git cat-file -p <commit-id>
+   ```
+
+   This will give you a more readable view of the commit’s metadata.
+
+---
+
+### Conclusion
+
+Understanding how Git works behind the scenes can give you a deeper appreciation for its power and efficiency. Git uses a key-value based database to store your project’s data in three essential objects: commit, tree, and blob. These objects allow Git to manage and track changes to your code in a fast, reliable, and organized way. 
+
+By exploring Git's internals with the commands provided, you can get a closer look at how Git handles your code at the lowest level — giving you full control over your version history.

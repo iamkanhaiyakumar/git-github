@@ -1,0 +1,51 @@
+### Overview: Git and Github
+
+Let’s start with the basics. Git is a version control system that allows you to track changes to your files and collaborate with others. It’s essential in managing the history of your code and helping you merge changes from different branches. If terms like *version control*, *branches*, and *merges* are new to you, don’t worry! This tutorial will walk you through them step-by-step.
+
+---
+
+### Git and Github: Understanding the Difference
+
+Git and Github, although closely related, are distinct entities. Git is a version control system used to track changes in your files. It's free, open-source software that works on Windows, macOS, and Linux. You can think of Git as the engine behind version control, installed locally on your machine.
+
+On the other hand, **Github** is a cloud-based platform where you can host your Git repositories. It's an online service that allows developers to store, manage, and share their code with others. While Git is the tool for version control, Github is where your code lives in the cloud, making it easier for developers to collaborate and share their work. Though there are other platforms offering Git repository hosting, Github is one of the most popular.
+
+---
+
+### A Little on Version Control Systems
+
+Version control systems (VCS) are essential in software development. They let you track and manage changes to your code, helping you revert to previous versions when needed. Think of version control as a game checkpoint: you can always go back to any point in the game, just like you can return to any version of your code in VCS.
+
+Before Git, developers used systems like SCCS (Source Code Control System), which were expensive and not very user-friendly. Git was created to make version control more accessible and efficient, replacing older systems like SCCS. Other common version control systems include Subversion (SVN), CVS, and Perforce.
+
+---
+
+### Learning Path: A Step-by-Step Guide
+
+In this tutorial, we’ll focus on learning the basics of Git and Github. Here’s a quick overview of the path we’ll take:
+
+1. **Get the Basics**: Start by understanding the fundamentals of Git and Github.
+2. **Use it Daily**: Start using Git in your daily workflow.
+3. **Face the Problems**: Encounter real-world challenges as you work with Git.
+4. **Solve Them**: Learn to solve common issues you’ll face with Git.
+5. **Learn More**: Dive deeper into more advanced Git topics.
+
+We’ll focus on Git first. Once you're comfortable with Git, transitioning to Github will be much easier.
+
+---
+
+### Installing Git
+
+To get started, you need to install Git. You can either use the command line to install it or simply visit the [official Git website](https://git-scm.com/downloads) to download the appropriate installer for your operating system. Git is available for Windows, macOS, and Linux.
+
+---
+
+### Creating a Github Account
+
+Another important step is to create an account on Github. You’ll need this account to store and share your code on the platform. Later in the tutorial, I will guide you through linking your Github account to your machine. But before you can push code to Github, you must set up **SSH key authentication**. This is essential because password-based authentication is no longer recommended, and in many cases, not even possible. We’ll cover how to set up SSH keys in a future section of the tutorial.
+
+---
+
+### Conclusion
+
+In this section, we’ve covered the basics of Git and Github, including their differences, the importance of version control, and the steps to install Git and create a Github account. By the end of this tutorial, you will have a strong understanding of Git and Github and be well-equipped to manage your code with version control effectively. Stay tuned as we dive deeper into practical usage, troubleshooting, and advanced concepts in the upcoming sections.
