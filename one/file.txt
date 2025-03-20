@@ -1,2 +1,0 @@
-Git
-Git is commonly used with platforms like GitHub, GitLab, and Bitbucket, which provide hosting for Git repositories and additional collaboration tools. Developers interact with Git through commands like git init, git commit, git push, and git pull, or through graphical interfaces integrated into IDEs like Visual Studio Code.
