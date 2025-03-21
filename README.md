@@ -1,7 +1,3 @@
-To create a **README.md** file for your repository, follow this template. You can customize it according to your project’s details:
-
----
-
 # Git-GitHub
 
 This repository contains examples and exercises related to using **Git** and **GitHub** effectively. It includes basic Git commands, setup, branching, merging, and more advanced features such as **rebase**, **stash**, and **tags**.
