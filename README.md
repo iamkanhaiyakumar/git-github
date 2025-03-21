@@ -85,4 +85,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 2. **Paste the template**: Copy and paste the provided template into the `README.md` file.
 3. **Customize**: Add specific details about your repository, such as any unique setup instructions or examples that are relevant to your project.
 
-This README file will give visitors a clear understanding of what the repository is about and how to get started.
