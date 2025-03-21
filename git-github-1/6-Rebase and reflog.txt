@@ -53,4 +53,3 @@ Reflog is a tool to track the history of your branch movements and commits. It s
 
 Together, these two features provide better control over your project's history and can help you avoid mistakes or recover lost work.
 
-Let me know if you want further clarification or examples on how to use either of these features!
