@@ -1,0 +1,31 @@
+This document provides a comprehensive overview of various Git commands, focusing on `git diff`, `git stash`, and `git tags`. Here's a summary of the key points covered:
+
+### Git Diff:
+- **`git diff`** compares changes between files, commits, branches, or the working directory and staging area.
+  - **Basic diff**: Shows differences between two files or versions.
+  - **Working Directory vs Staging Area**: `git diff` compares unstaged changes with the staging area.
+  - **Staging Area vs Repository**: `git diff --staged` compares the staged changes with the latest commit.
+  - **Branch Comparison**: `git diff <branch-name-one> <branch-name-two>` compares changes between two branches.
+  - **Commit Comparison**: `git diff <commit-hash-one> <commit-hash-two>` compares two commits.
+
+### Git Stash:
+- **`git stash`** temporarily saves changes that you’re not ready to commit.
+  - **Save changes**: `git stash` saves changes, allowing you to switch branches without committing.
+  - **Name stash**: `git stash save "message"` for easier identification.
+  - **View stash**: `git stash list` shows all stashes.
+  - **Apply stash**: `git stash apply` or `git stash apply stash@{n}` applies saved changes.
+  - **Pop stash**: `git stash pop` applies and removes the stash from the list.
+  - **Drop stash**: `git stash drop` removes a specific stash.
+  - **Clear stash**: `git stash clear` removes all stashes.
+
+### Git Tags:
+- **Tags** are used to mark specific commits, often for releases or milestones.
+  - **Create a tag**: `git tag <tag-name>` creates a simple tag at the current commit.
+  - **Annotated tag**: `git tag -a <tag-name> -m "message"` creates a tag with a message.
+  - **List tags**: `git tag` shows all tags.
+  - **Tag a commit**: `git tag <tag-name> <commit-hash>` tags a specific commit.
+  - **Push tag to remote**: `git push origin <tag-name>` pushes the tag to the remote repository.
+  - **Delete tag**: `git tag -d <tag-name>` deletes a local tag.
+  - **Delete tag remotely**: `git push origin :<tag-name>` deletes the tag on the remote repository.
+
+These commands are valuable for managing and organizing your work in Git, especially when working with branches, commits, or stashing changes temporarily.
